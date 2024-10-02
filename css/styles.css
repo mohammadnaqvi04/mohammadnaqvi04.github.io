@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #FFFCF6;
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .left-side {
+    flex: 0 0 40%;
+    text-align: center;
+    padding-right: 20px;
+  }
+  
+  .profile-pic {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .location {
+    font-family: "adobe-garamond-pro", serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    font-style: normal;
+    margin-bottom: 10px;
+  }
+  
+  .right-side {
+    flex: 0 0 60%;
+  }
+  
+  .content {
+    padding-right: 20px;
+  }
+  
+  .name {
+    font-size: 2.0rem;
+    font-family: "garamond-premier-pro", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 0.5rem;
+  }
+  
+  .info {
+    font-family: "garamond-premier-pro", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .bio {
+    font-family: "new-spirit", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.12rem;
+    margin-bottom: 2rem;
+  }
+
+   .bio a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .bio a:hover {
+    color: olive; 
+  }
+  
+  .nav-links {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+    margin-top: 2rem;
+    display: flex;
+    font-size: 1.3rem;
+    gap: 20px;
+  }
+  
+  .info a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .info a:hover {
+    color: olive; 
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: olive; 
+  }
+  
