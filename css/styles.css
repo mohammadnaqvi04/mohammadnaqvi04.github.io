@@ -97,7 +97,29 @@
     margin-top: 2rem;
     display: flex;
     font-size: 1.3rem;
+    transition: color 0.3s ease;
+    
     gap: 20px;
+  }
+  
+  .nav-links a:hover {
+    color: olive; 
+  }
+
+  .nav-links a:visited {
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:visited:hover {
+    color: olive;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:link, 
+  .nav-links a:active {
+    text-decoration: none;
+    color: #333;
   }
   
   .info a {
