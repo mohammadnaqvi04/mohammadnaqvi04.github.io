@@ -149,14 +149,22 @@
     margin-bottom: 10px;
 }
 
-.experience a {
+.experience a, .projects a {
   color: olive;
   text-decoration: none;
   font-weight: 400;
   transition: font-weight 0.3s ease;
 }
 
-.experience a:hover {
+.experience a:hover, .projects a:hover {
+  font-weight: 500;
+}
+
+.experience a:visited, .projects a:visited {
+  color: olive;
+}
+
+.experience a:visited:hover, .projects a:visited:hover {
   font-weight: 500;
 }
 
