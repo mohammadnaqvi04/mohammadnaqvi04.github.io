@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #FFFCF6;
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .left-side {
+    flex: 0 0 40%;
+    text-align: center;
+    padding-right: 20px;
+  }
+  
+  .profile-pic {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .location {
+    font-family: "adobe-garamond-pro", serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-style: normal;
+    margin-bottom: 10px;
+  }
+  
+  .right-side {
+    flex: 0 0 60%;
+  }
+  
+  .content {
+    padding-right: 20px;
+  }
+  
+  .name {
+    font-size: 2.0rem;
+    font-family: "garamond-premier-pro", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 0.5rem;
+  }
+
+  .experience {
+    font-family: "new-spirit", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.12rem;
+    margin-bottom: 2rem;
+  }
+  
+  .info {
+    font-family: "garamond-premier-pro", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .bio {
+    font-family: "new-spirit", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.12rem;
+    margin-bottom: 2rem;
+  }
+
+   .bio a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .bio a:hover {
+    color: olive; 
+  }
+  
+  .nav-links {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+    margin-top: 2rem;
+    display: flex;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+    
+    gap: 20px;
+  }
+  
+  .nav-links a:hover {
+    color: olive; 
+  }
+
+  .nav-links a:visited {
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:visited:hover {
+    color: olive;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:link, 
+  .nav-links a:active {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .info a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .info a:hover {
+    color: olive; 
+  }
+  
+  b, strong {
+    font-weight: bold;
+  }
+
+  .experience ul, .projects ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    padding-left: 0;
+}
+
+.experience li, .projects li {
+    font-family: "new-spirit", serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.experience a, .projects a {
+  color: olive;
+  text-decoration: none;
+  font-weight: 400;
+  transition: font-weight 0.3s ease;
+}
+
+.experience a:hover, .projects a:hover {
+  font-weight: 500;
+}
+
+.experience a:visited, .projects a:visited {
+  color: olive;
+}
+
+.experience a:visited:hover, .projects a:visited:hover {
+  font-weight: 500;
+}
+
+
+.experience ul {
+  list-style-type: disc;
+  margin-left: 40px;
+}
+
+.experience li ul {
+  
+  list-style-type: circle;
+  margin-left: 20px;
+}
+
+.experience li ul li {
+  font-family: "new-spirit", serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.experience li ul li a:hover {
+  font-weight: 500;
+}
+
+/* Mobile responsive - iPhone 15 Pro Max is 430px wide */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-side {
+    flex: none;
+    width: 100%;
+    max-width: 300px;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .right-side {
+    flex: none;
+    width: 100%;
+  }
+
+  .content {
+    padding-right: 0;
+  }
+
+  .name {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .info {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .bio {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    justify-content: center;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+
+  .bio {
+    margin-bottom: 1rem;
+  }
+
+  .experience ul, .projects ul {
+    margin-left: 20px;
+  }
+}
