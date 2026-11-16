@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temporal Pruning for a flat file Parquet database</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    body, html {
+      min-height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: #FFFCF6;
+      margin: 0;
+      padding: 20px 0;
+    }
+
+    .post-page {
+      width: 90%;
+      padding: 40px 56px;
+      background-color: #fff;
+      box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="post-page">
+    <a class="back-link" href="../blog.html" data-link>&larr; All posts</a>
+    <div class="date">Aug 31, 2026</div>
+    <h1>Temporal Pruning for a flat file Parquet database</h1>
+
+    <div class="post-body">
+<h2>The setup</h2>
+<p>Each partition covers a fixed window. A query like <code>WHERE ts BETWEEN &#39;2026-01-01&#39; AND &#39;2026-02-01&#39;</code> should only ever touch the files whose footer range overlaps it:</p>
+<pre><code>fn should_scan(file: &amp;FileFooter, query_range: &amp;TimeRange) -&gt; bool {
+    file.ts_min &lt;= query_range.end &amp;&amp; file.ts_max &gt;= query_range.start
+}
+</code></pre>
+<p>On the benchmark set this took wall-clock time from 4.1s to 0.49s — an 8.3x speedup — at the cost of a slightly heavier write path to compute and store the footer range.</p>
+<blockquote>
+<p>The full writeup, including the write-amplification tradeoffs, is in the project report.</p>
+</blockquote>
+<p>Read the <a href="https://github.com/mohammadnaqvi04/pq-vector/blob/feat/multi-pq-search/Temporal_File_Pruning_for_Vector_Search_over_Time_Partitioned_Parquet_Files.pdf">full report</a> or the <a href="https://github.com/mohammadnaqvi04/pq-vector/tree/feat/multi-pq-search">source</a>.</p>
+
+    </div>
+  </div>
+</body>
+</html>

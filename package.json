@@ -1,0 +1,14 @@
+{
+  "name": "mohammadnaqvi04.github.io",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:blog": "tsx scripts/build-blog.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "gray-matter": "^4.0.3",
+    "marked": "^15.0.4",
+    "tsx": "^4.19.2"
+  }
+}
